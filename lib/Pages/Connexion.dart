@@ -1,5 +1,6 @@
 import 'package:app1/Pages/Inscription.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class ConnexionPage extends StatefulWidget {
   const ConnexionPage({super.key});
@@ -22,7 +23,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                       width: MediaQuery.of(context).size.width *1,
                       height: MediaQuery.of(context).size.height *0.04
                   ),
-                  Image.asset("assets/images/app logo apk 2.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,),
+                  Image.asset("assets/images/app logo apk 2.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(1, 1)).fadeIn().shakeX(delay: Duration(seconds: 1),duration: Duration(milliseconds: 300)),
 
                   SizedBox(height: MediaQuery.of(context).size.height *0.02,),
                   Container(
@@ -41,7 +42,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                           )
                       ),
                     ),
-                  ),
+                  ).animate().fadeIn().scale(delay:Duration(milliseconds: 200),begin: Offset(1.3, 1.3),end: Offset(1, 1)),
                   SizedBox(height: MediaQuery.of(context).size.height *0.02,),
                   Container(
                     width: MediaQuery.of(context).size.width *0.9,
@@ -59,7 +60,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                           )
                       ),
                     ),
-                  ),
+                  ).animate().fadeIn().scale(delay:Duration(milliseconds: 300),begin: Offset(1.3, 1.3),end: Offset(1, 1)),
                   SizedBox(height: MediaQuery.of(context).size.height *0.04,),
                   Container(
                     alignment: Alignment.center,
@@ -81,7 +82,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                         )
                     ),
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height *0.02),
+                  SizedBox(height: MediaQuery.of(context).size.height *0.06),
                   Container(
                       alignment: Alignment.center,
                       width:MediaQuery.of(context).size.width *1,
@@ -91,10 +92,10 @@ class _ConnexionPageState extends State<ConnexionPage> {
                             Text("Pas encore de \ncompte ? ",textAlign: TextAlign.center,style: TextStyle(fontFamily: "poppins",fontSize: MediaQuery.of(context).size.width *0.043,color: Colors.white60),),
                             TextButton(onPressed: (){
                               Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>InscriptionPage()), (route)=>false);
-                            }, child: Text("s'inscire",style: TextStyle(color: Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.043),))
+                            }, child: Text("s'inscrire",style: TextStyle(color: Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.043),))
                           ]
                       )
-                  )
+                  ).animate().fadeIn().scale(delay:Duration(milliseconds: 300),begin: Offset(1.3, 1.3),end: Offset(1, 1)).shakeX(delay: Duration(milliseconds: 1300),duration: Duration(milliseconds: 300)),
                 ],
               ),
               Container(
@@ -102,7 +103,6 @@ class _ConnexionPageState extends State<ConnexionPage> {
                 margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.36),
                 child: Text("BEFLÊMI KOUADIO",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: Colors.white),),
               ),
-
               Container(
                   alignment: Alignment.center,
                   child:Container(
