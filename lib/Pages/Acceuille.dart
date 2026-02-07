@@ -11,7 +11,17 @@ class _AcceuillePageState extends State<AcceuillePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Column(
+              children: [
 
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:app1/Pages/Connexion.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class InscriptionPage extends StatefulWidget {
   const InscriptionPage({super.key});
@@ -24,7 +25,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                   width: MediaQuery.of(context).size.width *1,
                     height: MediaQuery.of(context).size.height *0.04
                 ),
-                Image.asset("assets/images/logo apk.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,),
+                Image.asset("assets/images/logo apk.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(1, 1)).fadeIn().shakeX(delay: Duration(seconds: 1),duration: Duration(milliseconds: 300)),
                 Container(
                   width: MediaQuery.of(context).size.width *0.9,
                   child: TextFormField(
@@ -39,7 +40,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                     )
                   ),
                 ),
-                ),
+                ).animate().fadeIn(delay: Duration(milliseconds: 1200)).scale(delay:Duration(milliseconds: 1300),begin: Offset(1.3, 1.3),end: Offset(1, 1)),
                 SizedBox(height: MediaQuery.of(context).size.height *0.02,),
                 Container(
                   width: MediaQuery.of(context).size.width *0.9,
@@ -55,7 +56,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                         )
                     ),
                   ),
-                ),
+                ).animate().fadeIn(delay: Duration(milliseconds: 1300)).scale(delay:Duration(milliseconds: 1400),begin: Offset(1.3, 1.3),end: Offset(1, 1)),
                 SizedBox(height: MediaQuery.of(context).size.height *0.02,),
                 Container(
                   width: MediaQuery.of(context).size.width *0.9,
@@ -71,7 +72,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                         )
                     ),
                   ),
-                ),
+                ).animate().fadeIn(delay: Duration(milliseconds: 1400)).scale(delay:Duration(milliseconds: 1500),begin: Offset(1.3, 1.3),end: Offset(1, 1)),
                 SizedBox(height: MediaQuery.of(context).size.height *0.02,),
                 Container(
                   width: MediaQuery.of(context).size.width *0.9,
@@ -87,7 +88,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                         )
                     ),
                   ),
-                ),
+                ).animate().fadeIn(delay: Duration(milliseconds: 1500)).scale(delay:Duration(milliseconds: 1600),begin: Offset(1.3, 1.3),end: Offset(1, 1)),
                 SizedBox(height: MediaQuery.of(context).size.height *0.04,),
                 GestureDetector(
                   onTap: (){
@@ -103,7 +104,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                     ),
                     child: Text("S'incrire",style: TextStyle(fontSize: MediaQuery.of(context).size.width *0.045,fontFamily: "Poppins",color: Colors.white),),
                   ),
-                )
+                ).animate().fadeIn(delay: Duration(milliseconds: 1600))
                 ,
                 SizedBox(height: MediaQuery.of(context).size.height *0.03),
 
@@ -114,7 +115,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                       bottom: BorderSide(color: Color(0xFF2E5AA6),width:MediaQuery.of(context).size.width *0.0065 )
                     )
                   ),
-                ),
+                ).animate().fadeIn(delay: Duration(milliseconds: 2000)),
                 SizedBox(height: MediaQuery.of(context).size.height *0.02),
                 Container(
                   alignment: Alignment.center,
@@ -128,14 +129,14 @@ class _InscriptionPageState extends State<InscriptionPage> {
                       }, child: Text("se connecter",style: TextStyle(color: Color(0xFF2E5AA6),fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.043),))
                     ]
                   )
-                )
+                ).animate().fadeIn(delay: Duration(milliseconds: 2000)).shakeX()
                 ],
             ),
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.36),
               child: Text("BEFLÊMI KOUADIO",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: Color(0xFF2E5AA6)),),
-            ),
+            ).animate().fadeIn(delay: Duration(milliseconds: 1800)),
 Container(
       alignment: Alignment.center,
       child:Container(
@@ -148,7 +149,7 @@ Container(
         margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.06),
         child: Text("Inscription",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: Color(0xFF2E5AA6)),),)
 
-  ),
+  ).animate().fadeIn(delay: Duration(milliseconds: 1900)),
 
 
             ],
