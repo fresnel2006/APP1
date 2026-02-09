@@ -1,5 +1,7 @@
 import 'package:app1/Pages/Acceuille.dart';
+import 'package:app1/Pages/Bienvenue.dart';
 import 'package:app1/Pages/Inscription.dart';
+import 'package:app1/Pages/Switch.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: AcceuillePage(),
+        body:BienvenuePage(),
       ),
     );
   }

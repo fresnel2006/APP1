@@ -31,6 +31,9 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.2
+  shared_preferences: ^2.3.2
+  flutter_zoom_drawer: ^3.2.0
+  lottie: ^3.3.2
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -62,6 +65,8 @@ flutter:
      - assets/images/logo apk.png
      - assets/images/logo equipe.png
      - assets/images/app logo apk 2.png
+     - assets/animations/01_Finishig Studies.json
+     - assets/animations/Onboarding Page 1.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

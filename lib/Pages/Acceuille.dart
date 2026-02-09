@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AcceuillePage extends StatefulWidget {
   const AcceuillePage({super.key});
@@ -8,7 +11,25 @@ class AcceuillePage extends StatefulWidget {
 }
 
 class _AcceuillePageState extends State<AcceuillePage> {
-  bool sun=false;
+
+  bool sun=true;
+  Future<void>initiation_theme() async{
+    var perfs=await SharedPreferences.getInstance();
+    perfs.setBool("sun",sun);
+    print("la valeur de sun sauvegarder est : "+sun.toString());
+  }
+  Future<void>obtention_theme()async{
+    var perfs=await SharedPreferences.getInstance();
+    setState(() {
+      sun=perfs.getBool("sun")??true;
+    });
+    print("la valeur de sun sauvegarder est : "+sun.toString());
+  }
+  @override
+  void initState(){
+    super.initState();
+    obtention_theme();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +37,10 @@ class _AcceuillePageState extends State<AcceuillePage> {
       body: SingleChildScrollView(
         child: Stack(
           children: [
-            Container(
+            sun?Container(
               height: MediaQuery.of(context).size.height *0.7,
               decoration: BoxDecoration(
-                color: sun?Colors.white:Colors.blueGrey.shade800,
+                color: Colors.white,
                 boxShadow: [
                     BoxShadow(
                       color: Colors.black,
@@ -32,6 +53,22 @@ class _AcceuillePageState extends State<AcceuillePage> {
                   bottomRight: Radius.circular(MediaQuery.of(context).size.width *0.1)
                 )
               ),
+            ):Container(
+              height: MediaQuery.of(context).size.height *0.7,
+              decoration: BoxDecoration(
+                  color:Colors.blueGrey.shade800,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black,
+                      spreadRadius:MediaQuery.of(context).size.width *0.05 ,
+                      blurRadius: MediaQuery.of(context).size.width *0.2,
+                    )
+                  ],
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(MediaQuery.of(context).size.width *0.1),
+                      bottomRight: Radius.circular(MediaQuery.of(context).size.width *0.1)
+                  )
+              ),
             ),
             Column(
               children: [
@@ -43,8 +80,10 @@ class _AcceuillePageState extends State<AcceuillePage> {
                       alignment: Alignment.center,
                       width: MediaQuery.of(context).size.width *0.15,
                       child: IconButton(onPressed: (){
+                        ZoomDrawer.of(context)!.toggle();
 
-                      }, icon: Icon(Icons.menu_open_outlined,color: sun?Color(0xFF2E5AA6):Colors.white,size: MediaQuery.of(context).size.width *0.08,),)),
+                      }, icon: Icon(Icons.menu_open_outlined,color: sun?Color(0xFF2E5AA6):Colors.white,size: MediaQuery.of(context).size.width *0.08,),)
+                    ),
                     Container(
                       child: Row(
                         children: [
@@ -53,17 +92,19 @@ class _AcceuillePageState extends State<AcceuillePage> {
                           Text("KOUADIO",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: sun?Color(0xFF2E5AA6):Colors.white))
                         ],
                       ),
-                    ),
-                    Container(
+                    ),Container(
                       alignment: Alignment.center,
                       width: MediaQuery.of(context).size.width *0.15,
                       child: IconButton(onPressed: (){
                         setState(() {
                           sun=!sun;
+                          initiation_theme();
                         });
-                      }, icon: sun?Icon(Icons.dark_mode,color:Color(0xFF2E5AA6),):Icon(Icons.wb_sunny_outlined,color: Colors.white,)),)
+                        }, icon: sun?Icon(Icons.dark_mode,color:Color(0xFF2E5AA6),):Icon(Icons.wb_sunny_outlined,color: Colors.white,)),
+                    )
                   ],
-                ),
+                ).animate().fadeIn(delay: Duration(seconds: 1)).blur(begin: Offset(3, 3),end: Offset(0, 0)),
+
                 SizedBox(height: MediaQuery.of(context).size.height *0.04,),
                 Container(
                   width: MediaQuery.of(context).size.width *0.95,
@@ -74,7 +115,7 @@ class _AcceuillePageState extends State<AcceuillePage> {
                     cursorHeight: MediaQuery.of(context).size.height *0.06,
                     style: TextStyle(color: sun?Color(0xFF2E5AA6):Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.08),
                     decoration: InputDecoration(
-
+                        hint: Text("Saisissez le texte que vous \nvoulez traduire",style: TextStyle(color: sun?Color(0xFF2E5AA6):Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.07),),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.transparent)
                       ),
@@ -83,7 +124,8 @@ class _AcceuillePageState extends State<AcceuillePage> {
                       )
                     ),
                   ),
-                )
+                ).animate().fadeIn(delay: Duration(milliseconds: 1300)).blur(begin: Offset(3, 3),end: Offset(0, 0)),
+
               ],
             ),
             Column(
@@ -124,7 +166,7 @@ class _AcceuillePageState extends State<AcceuillePage> {
                 ),
 
               ],
-            )
+            ).animate().fadeIn(delay: Duration(milliseconds: 1500)).blur(begin: Offset(3, 3),end: Offset(0, 0)),
 
           ],
         ),
