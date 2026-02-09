@@ -13,6 +13,7 @@ class AcceuillePage extends StatefulWidget {
 class _AcceuillePageState extends State<AcceuillePage> {
 
   bool sun=true;
+  bool logo=false;
   Future<void>initiation_theme() async{
     var perfs=await SharedPreferences.getInstance();
     perfs.setBool("sun",sun);
@@ -84,15 +85,37 @@ class _AcceuillePageState extends State<AcceuillePage> {
 
                       }, icon: Icon(Icons.menu_open_outlined,color: sun?Color(0xFF2E5AA6):Colors.white,size: MediaQuery.of(context).size.width *0.08,),)
                     ),
-                    Container(
-                      child: Row(
-                        children: [
-                          Text("BEFLÊMI",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: sun?Color(0xFF2E5AA6):Colors.white)),
-                          SizedBox(width:MediaQuery.of(context).size.width *0.02 ,),
-                          Text("KOUADIO",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: sun?Color(0xFF2E5AA6):Colors.white))
-                        ],
-                      ),
-                    ),Container(
+                    logo?GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          logo=!logo;
+                        });
+                      },
+                      child:Container(
+                        child: Row(
+                          children: [
+                            Text("BEFLÊMI",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: sun?Color(0xFF2E5AA6):Colors.white)),
+                            SizedBox(width:MediaQuery.of(context).size.width *0.02 ,),
+                            Text("KOUADIO",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: sun?Color(0xFF2E5AA6):Colors.white))
+                          ],
+                        ),
+                      ) ,
+                    ):GestureDetector(
+                      onTap: (){
+                        setState(() {
+                          logo=!logo;
+                        });
+                      },
+                      child:Container(
+                        child: Row(
+                          children: [
+                            Text("BK",style: TextStyle(fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06,color: sun?Color(0xFF2E5AA6):Colors.white))
+
+                            ],
+                        ),
+                      ) ,
+                    )
+                    ,Container(
                       alignment: Alignment.center,
                       width: MediaQuery.of(context).size.width *0.15,
                       child: IconButton(onPressed: (){

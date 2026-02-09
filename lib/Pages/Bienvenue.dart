@@ -23,20 +23,25 @@ class _BienvenuePageState extends State<BienvenuePage> {
                 Container(
                   margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.19),
                   child: Image.asset("assets/images/logo apk.png",height: MediaQuery.of(context).size.height *0.5,),
-                ).animate()
+                ).animate().fadeIn(duration: Duration(seconds: 1)).blur(begin: Offset(8, 8),end: Offset(0,0))
               ],
             ),
             Column(
               children: [
                 Container(
                   margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.54),
-                  child: Text("AKWABA",style: TextStyle(color: Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.08,),),),
+                  child: Text("AKWABA",style: TextStyle(color: Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.08,),),
+                ).animate().fadeIn(delay: Duration(milliseconds: 1200),duration: Duration(seconds: 1))
+                ,
                 Container(
                   width: MediaQuery.of(context).size.width *1,),
 Container(
   child: Text("[Utilisateur]",style: TextStyle(color: Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06),),
-),SizedBox(height: MediaQuery.of(context).size.height *0.17,),
-                CircularProgressIndicator(color: Colors.white,)
+).animate().fadeIn(delay: Duration(milliseconds: 1500),duration: Duration(seconds: 1))
+                ,
+                SizedBox(height: MediaQuery.of(context).size.height *0.17,),
+                CircularProgressIndicator(color: Colors.white,).animate().fadeIn(delay: Duration(milliseconds: 1200),duration: Duration(seconds: 1)).blur(begin: Offset(8, 8),end: Offset(0,0))
+
               ],
             )
 
