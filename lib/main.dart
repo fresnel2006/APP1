@@ -1,3 +1,4 @@
+import 'package:app1/Pages/BienvenueApprentissage.dart';
 import 'package:app1/Pages/Menu.dart';
 import 'package:app1/Pages/Traducteur.dart';
 import 'package:app1/Pages/Bienvenue.dart';
@@ -20,7 +21,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body:SwitchPage(),
+        body:BienvenueApprentissagePage(),
       ),
     );
   }

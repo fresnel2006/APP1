@@ -23,7 +23,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                       width: MediaQuery.of(context).size.width *1,
                       height: MediaQuery.of(context).size.height *0.04
                   ),
-                  Image.asset("assets/images/app logo apk 2.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(1, 1)).fadeIn().shakeX(delay: Duration(seconds: 1),duration: Duration(milliseconds: 300)),
+                  Image.asset("assets/images/app logo apk 2.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(0, 0)).fadeIn().shakeX(delay: Duration(seconds: 1),duration: Duration(milliseconds: 300)),
 
                   SizedBox(height: MediaQuery.of(context).size.height *0.02,),
                   Container(
@@ -95,7 +95,7 @@ class _ConnexionPageState extends State<ConnexionPage> {
                             }, child: Text("s'inscrire",style: TextStyle(color: Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.043),))
                           ]
                       )
-                  ).animate().fadeIn().scale(delay:Duration(milliseconds: 300),begin: Offset(1.3, 1.3),end: Offset(1, 1)).shakeX(delay: Duration(milliseconds: 1300),duration: Duration(milliseconds: 300)),
+                  ).animate().fadeIn().scale(delay:Duration(milliseconds: 300),begin: Offset(1.3, 1.3),end: Offset(1, 1)).shakeX(delay: Duration(milliseconds: 1000),duration: Duration(milliseconds: 300)),
                 ],
               ),
               Container(

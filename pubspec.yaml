@@ -67,6 +67,7 @@ flutter:
      - assets/images/app logo apk 2.png
      - assets/animations/01_Finishig Studies.json
      - assets/animations/Onboarding Page 1.json
+     - assets/animations/Exams Preparation..json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

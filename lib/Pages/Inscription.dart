@@ -25,7 +25,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                   width: MediaQuery.of(context).size.width *1,
                     height: MediaQuery.of(context).size.height *0.04
                 ),
-                Image.asset("assets/images/logo apk.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(1, 1)).fadeIn().shakeX(delay: Duration(seconds: 1),duration: Duration(milliseconds: 300)),
+                Image.asset("assets/images/logo apk.png",height: MediaQuery.of(context).size.height *0.4,width: MediaQuery.of(context).size.height *0.4,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(0, 0)).fadeIn().shakeX(delay: Duration(seconds: 1),duration: Duration(milliseconds: 300)),
                 Container(
                   width: MediaQuery.of(context).size.width *0.9,
                   child: TextFormField(
