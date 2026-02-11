@@ -1,4 +1,4 @@
-import 'package:app1/Pages/Acceuille.dart';
+import 'package:app1/Pages/Traducteur.dart';
 import 'package:app1/Pages/Menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
@@ -16,11 +16,11 @@ class _SwitchPageState extends State<SwitchPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body:ZoomDrawer(
-        menuScreen: MenuPage(), mainScreen: AcceuillePage(),
+        menuScreen: MenuPage(), mainScreen: TraducteurPage(),
         mainScreenTapClose: true,
         style: DrawerStyle.style1,
         angle: 0,
-        slideWidth: MediaQuery.of(context).size.width *0.8,
+        slideWidth: MediaQuery.of(context).size.width *0.9,
         mainScreenOverlayColor: Colors.black12,
 
       ) ,

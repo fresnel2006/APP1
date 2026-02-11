@@ -1,4 +1,5 @@
-import 'package:app1/Pages/Acceuille.dart';
+import 'package:app1/Pages/Menu.dart';
+import 'package:app1/Pages/Traducteur.dart';
 import 'package:app1/Pages/Bienvenue.dart';
 import 'package:app1/Pages/Inscription.dart';
 import 'package:app1/Pages/Switch.dart';

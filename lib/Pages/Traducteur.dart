@@ -3,17 +3,17 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class AcceuillePage extends StatefulWidget {
-  const AcceuillePage({super.key});
+class TraducteurPage extends StatefulWidget {
+  const TraducteurPage({super.key});
 
   @override
-  State<AcceuillePage> createState() => _AcceuillePageState();
+  State<TraducteurPage> createState() => _TraducteurPageState();
 }
 
-class _AcceuillePageState extends State<AcceuillePage> {
+class _TraducteurPageState extends State<TraducteurPage> {
 
   bool sun=true;
-  bool logo=false;
+  bool logo=true;
   Future<void>initiation_theme() async{
     var perfs=await SharedPreferences.getInstance();
     perfs.setBool("sun",sun);

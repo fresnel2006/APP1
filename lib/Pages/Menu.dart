@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -18,33 +19,107 @@ class _MenuPageState extends State<MenuPage> {
           children: [
             Column(
               children: [
-Container(
-  margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.04),
-  child:Lottie.asset("assets/animations/Onboarding Page 1.json") ,
-),
-                SizedBox(height: MediaQuery.of(context).size.height *0.05,),
+                Container(
+                  alignment: Alignment.center,
+                  height: MediaQuery.of(context).size.height *0.17,
+                  decoration: BoxDecoration(
+                      color:Color(0xFF2E5AA6),
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(MediaQuery.of(context).size.width *0.1)
+                    )
+                  ),
+                  child: ListTile(
+                    title: Text("Arê ho",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06)),
+                    leading: Icon(Icons.waving_hand_rounded,color: Colors.white,size: MediaQuery.of(context).size.width *0.1,),
+                    subtitle: Text("Traore ange",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.055)),
+                    trailing: Icon(CupertinoIcons.arrow_down_right,color: Colors.white,),
+                  ),
+                ),
+
+                SizedBox(height: MediaQuery.of(context).size.height *0.02,),
+
                 GestureDetector(
                   onTap: (){
 
                   },
                   child: Container(
-                  alignment: Alignment.center,
-                  height: MediaQuery.of(context).size.height *0.06,
-                  width: MediaQuery.of(context).size.width *0.38,
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                          color: Color(0xFF2E5AA6),
-                          width: MediaQuery.of(context).size.width *0.006
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(MediaQuery.of(context).size.width *1))
-                  ),
-                  child: Text("Historique",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.05),),
-                )
+                      alignment: Alignment.center,
+                      height: MediaQuery.of(context).size.height *0.07,
+                      width: MediaQuery.of(context).size.width *1,
+                      child: Row(
+                        children: [
+                          SizedBox(width: MediaQuery.of(context).size.width *0.04,),
+                          Icon(Icons.account_circle,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
+                          SizedBox(width: MediaQuery.of(context).size.width *0.06,),
+                          Text("Profil",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                        ],
+                      )
+                  )
                   ,),
+                GestureDetector(
+                  onTap: (){
+
+                  },
+                  child: Container(
+                      alignment: Alignment.center,
+                      height: MediaQuery.of(context).size.height *0.07,
+                      width: MediaQuery.of(context).size.width *1,
+                      child: Row(
+                        children: [
+                          SizedBox(width: MediaQuery.of(context).size.width *0.04,),
+                          Icon(Icons.list,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
+                          SizedBox(width: MediaQuery.of(context).size.width *0.06,),
+                          Text("Historique",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                        ],
+                      )
+                  )
+                  ,),
+                GestureDetector(
+                    onTap: (){
+
+                    },
+                    child: Container(
+                        alignment: Alignment.center,
+                        height: MediaQuery.of(context).size.height *0.07,
+                        width: MediaQuery.of(context).size.width *1,
+
+                        child: Row(
+
+                          children: [
+                            SizedBox(width: MediaQuery.of(context).size.width *0.04,),
+                            Icon(Icons.translate,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
+                            SizedBox(width: MediaQuery.of(context).size.width *0.06,),
+                            Text("Traducteur",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                            ],
+                        )
+                    )
+                    ,),
+                GestureDetector(
+                  onTap: (){
+
+                  },
+                  child: Container(
+                      alignment: Alignment.center,
+                      height: MediaQuery.of(context).size.height *0.07,
+                      width: MediaQuery.of(context).size.width *1,
+                      child: Row(
+                        children: [
+                          SizedBox(width: MediaQuery.of(context).size.width *0.04,),
+                          Icon(Icons.school_outlined,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
+                          SizedBox(width: MediaQuery.of(context).size.width *0.06,),
+                          Text("Apprentissage",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                          ],
+                      )
+                  )
+                  ,),
+
+
+
+
+                SizedBox(height: MediaQuery.of(context).size.height *0.2,),
                 Container(
-                  margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.24),
                   child: Lottie.asset("assets/animations/01_Finishig Studies.json"),
-                ),
+                )
                 ]
             )
           ],
