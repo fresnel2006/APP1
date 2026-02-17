@@ -31,12 +31,12 @@ class _MenuPageState extends State<MenuPage> {
                   child: ListTile(
                     title: Text("Arê ho",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06)),
                     leading: Icon(Icons.waving_hand_rounded,color: Colors.white,size: MediaQuery.of(context).size.width *0.1,),
-                    subtitle: Text("Traore ange",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.055)),
+                    subtitle: Text("Traore ange",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.053)),
                     trailing: Icon(CupertinoIcons.arrow_down_right,color: Colors.white,),
                   ),
                 ),
 
-                SizedBox(height: MediaQuery.of(context).size.height *0.02,),
+                SizedBox(height: MediaQuery.of(context).size.height *0.04,),
 
                 GestureDetector(
                   onTap: (){
@@ -51,7 +51,7 @@ class _MenuPageState extends State<MenuPage> {
                           SizedBox(width: MediaQuery.of(context).size.width *0.04,),
                           Icon(Icons.account_circle,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
                           SizedBox(width: MediaQuery.of(context).size.width *0.06,),
-                          Text("Profil",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                          Text("Profil",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.053),),
                         ],
                       )
                   )
@@ -69,7 +69,7 @@ class _MenuPageState extends State<MenuPage> {
                           SizedBox(width: MediaQuery.of(context).size.width *0.04,),
                           Icon(Icons.list,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
                           SizedBox(width: MediaQuery.of(context).size.width *0.06,),
-                          Text("Historique",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                          Text("Historique",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.053),),
                         ],
                       )
                   )
@@ -89,7 +89,7 @@ class _MenuPageState extends State<MenuPage> {
                             SizedBox(width: MediaQuery.of(context).size.width *0.04,),
                             Icon(Icons.translate,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
                             SizedBox(width: MediaQuery.of(context).size.width *0.06,),
-                            Text("Traducteur",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                            Text("Traducteur",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.053),),
                             ],
                         )
                     )
@@ -107,16 +107,30 @@ class _MenuPageState extends State<MenuPage> {
                           SizedBox(width: MediaQuery.of(context).size.width *0.04,),
                           Icon(Icons.school_outlined,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
                           SizedBox(width: MediaQuery.of(context).size.width *0.06,),
-                          Text("Apprentissage",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.055),),
+                          Text("Apprentissage",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.053),),
                           ],
                       )
                   )
                   ,),
+                GestureDetector(
+                  onTap: (){
 
-
-
-
-                SizedBox(height: MediaQuery.of(context).size.height *0.2,),
+                  },
+                  child: Container(
+                      alignment: Alignment.center,
+                      height: MediaQuery.of(context).size.height *0.07,
+                      width: MediaQuery.of(context).size.width *1,
+                      child: Row(
+                        children: [
+                          SizedBox(width: MediaQuery.of(context).size.width *0.04,),
+                          Icon(Icons.settings,color:Color(0xFF2E5AA6),size: MediaQuery.of(context).size.width *0.07,),
+                          SizedBox(width: MediaQuery.of(context).size.width *0.06,),
+                          Text("Paramètre",style: TextStyle(fontFamily: "Poppins",color:Color(0xFF2E5AA6),fontSize: MediaQuery.of(context).size.width *0.053),),
+                        ],
+                      )
+                  )
+                  ,),
+                SizedBox(height: MediaQuery.of(context).size.height *0.11,),
                 Container(
                   child: Lottie.asset("assets/animations/01_Finishig Studies.json"),
                 )

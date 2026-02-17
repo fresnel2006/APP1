@@ -133,7 +133,7 @@ class _TraducteurPageState extends State<TraducteurPage> {
                   width: MediaQuery.of(context).size.width *0.95,
                   height: MediaQuery.of(context).size.height *0.7,
                   child: TextFormField(
-                    maxLines: 10,
+                    maxLines: 6,
                     cursorColor: sun?Color(0xFF2E5AA6):Colors.white,
                     cursorHeight: MediaQuery.of(context).size.height *0.06,
                     style: TextStyle(color: sun?Color(0xFF2E5AA6):Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.08),
@@ -190,8 +190,19 @@ class _TraducteurPageState extends State<TraducteurPage> {
 
               ],
             ).animate().fadeIn(delay: Duration(milliseconds: 1500)).blur(begin: Offset(3, 3),end: Offset(0, 0)),
+Column(
+  children: [
+    Container(width: MediaQuery.of(context).size.width *1,),
+    sun?Container(
+      margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.45),
+      child: Image.asset("assets/images/logo apk.png",height: MediaQuery.of(context).size.height *0.27,width: MediaQuery.of(context).size.height *0.27,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(0, 0)).fadeIn(),)
+    :Container(
+      margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.45),
+      child: Image.asset("assets/images/app logo apk 3.png",height: MediaQuery.of(context).size.height *0.27,width: MediaQuery.of(context).size.height *0.27,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(0, 0)).fadeIn(),)
 
-          ],
+  ],
+)
+            ],
         ),
       ),
     );
