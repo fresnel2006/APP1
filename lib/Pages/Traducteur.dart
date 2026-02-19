@@ -167,7 +167,11 @@ class _TraducteurPageState extends State<TraducteurPage> {
                       ),
                       child: Text("Français",style: TextStyle(color: Colors.white,fontFamily: "Poppins"),),
                     ),
-                    IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_double_arrow_right,color: Colors.white,size: MediaQuery.of(context).size.width *0.07,)),
+                    SizedBox(width: MediaQuery.of(context).size.width *0.02,),
+                    IconButton(onPressed: (){
+
+                    }, icon: Icon(Icons.compare_arrows_rounded,color: Colors.white,size: MediaQuery.of(context).size.width *0.07,)),
+                    SizedBox(width: MediaQuery.of(context).size.width *0.02,),
                     Container(
                       alignment: Alignment.center,
                       height: MediaQuery.of(context).size.height *0.07,
@@ -188,6 +192,7 @@ class _TraducteurPageState extends State<TraducteurPage> {
                   }, icon: Icon(Icons.cameraswitch_rounded,color: Colors.white,size:MediaQuery.of(context).size.height *0.07 ,)),
                 ),
 
+
               ],
             ).animate().fadeIn(delay: Duration(milliseconds: 1500)).blur(begin: Offset(3, 3),end: Offset(0, 0)),
 Column(
@@ -201,7 +206,14 @@ Column(
       child: Image.asset("assets/images/app logo apk 3.png",height: MediaQuery.of(context).size.height *0.27,width: MediaQuery.of(context).size.height *0.27,).animate().blur(duration: Duration(seconds: 1),begin: Offset(4, 4),end: Offset(0, 0)).fadeIn(),)
 
   ],
-)
+),
+      Container(
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height *0.88,left: MediaQuery.of(context).size.width *0.7),
+        child: IconButton(onPressed: (){
+
+        }, icon: Icon(Icons.settings_voice,color: Colors.white,size:MediaQuery.of(context).size.width *0.15 ,)),
+      ).animate().fadeIn(delay: Duration(milliseconds: 1500)).blur(begin: Offset(3, 3),end: Offset(0, 0)),
+
             ],
         ),
       ),

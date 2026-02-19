@@ -72,6 +72,11 @@ flutter:
      - assets/animations/learning.json
      - assets/animations/Appointment booking with smartphone.json
      - assets/animations/Linkedin Career Celebration Reaction Recreated.json
+     - assets/images/Teacher student.gif
+     - assets/images/Hello.gif
+     - assets/animations/Error State - Dog.json
+     - assets/animations/Bull.json
+     - assets/animations/Angry Rrrrr!.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

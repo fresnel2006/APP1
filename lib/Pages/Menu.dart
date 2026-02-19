@@ -1,3 +1,5 @@
+import 'package:app1/Pages/Apprentissage.dart';
+import 'package:app1/Pages/Parametre.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -21,7 +23,7 @@ class _MenuPageState extends State<MenuPage> {
               children: [
                 Container(
                   alignment: Alignment.center,
-                  height: MediaQuery.of(context).size.height *0.17,
+                  height: MediaQuery.of(context).size.height *0.2,
                   decoration: BoxDecoration(
                       color:Color(0xFF2E5AA6),
                     borderRadius: BorderRadius.only(
@@ -29,10 +31,10 @@ class _MenuPageState extends State<MenuPage> {
                     )
                   ),
                   child: ListTile(
-                    title: Text("Arê ho",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.06)),
+                    title: Text("Arê ho",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.065)),
                     leading: Icon(Icons.waving_hand_rounded,color: Colors.white,size: MediaQuery.of(context).size.width *0.1,),
-                    subtitle: Text("Traore ange",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.053)),
-                    trailing: Icon(CupertinoIcons.arrow_down_right,color: Colors.white,),
+                    subtitle: Text("Traore ange",style:TextStyle(color:Colors.white,fontFamily: "Poppins",fontSize: MediaQuery.of(context).size.width *0.055)),
+                    trailing: Icon(CupertinoIcons.arrow_down_right,color: Colors.white,size: MediaQuery.of(context).size.width *0.08,),
                   ),
                 ),
 
@@ -96,7 +98,7 @@ class _MenuPageState extends State<MenuPage> {
                     ,),
                 GestureDetector(
                   onTap: (){
-
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>ApprentissagePage()), (route)=>false);
                   },
                   child: Container(
                       alignment: Alignment.center,
@@ -114,7 +116,7 @@ class _MenuPageState extends State<MenuPage> {
                   ,),
                 GestureDetector(
                   onTap: (){
-
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>ParametrePage()), (route)=>false);
                   },
                   child: Container(
                       alignment: Alignment.center,
@@ -130,7 +132,7 @@ class _MenuPageState extends State<MenuPage> {
                       )
                   )
                   ,),
-                SizedBox(height: MediaQuery.of(context).size.height *0.11,),
+                SizedBox(height: MediaQuery.of(context).size.height *0.08,),
                 Container(
                   child: Lottie.asset("assets/animations/01_Finishig Studies.json"),
                 )
