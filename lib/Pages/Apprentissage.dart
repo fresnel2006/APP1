@@ -1,3 +1,4 @@
+import 'package:app1/Pages/Entrainement.dart';
 import 'package:app1/Pages/Switch.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _ApprentissagePageState extends State<ApprentissagePage> {
           children: [
             Column(
               children: [
-                SizedBox(height: MediaQuery.of(context).size.height *0.04,),
+                SizedBox(height: MediaQuery.of(context).size.height *0.045,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -96,11 +97,14 @@ class _ApprentissagePageState extends State<ApprentissagePage> {
                 Column(
                   children: [
                     SizedBox(height: MediaQuery.of(context).size.height *0.038,),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>EntrainementPage()));
+                      },
+                      child:
                     Stack(
                       children: [
-
                         Container(
-
                           decoration: BoxDecoration(
                             ),
                           child: Row(
@@ -115,6 +119,8 @@ class _ApprentissagePageState extends State<ApprentissagePage> {
                                 ),
                                 child: Image.asset("assets/images/Hello.gif"),
                               ),
+                              GestureDetector(
+                                child:
                               Column(
                                 children: [
                                   Container(
@@ -145,7 +151,7 @@ class _ApprentissagePageState extends State<ApprentissagePage> {
                                       ],
                                       )),
                                 ],
-                              )
+                              ))
                             ],
                           ),
 
@@ -156,7 +162,10 @@ class _ApprentissagePageState extends State<ApprentissagePage> {
 
                       ],
                     ),
+                    ),
                     SizedBox(height: MediaQuery.of(context).size.height *0.015,),
+                    GestureDetector(
+                      child:
                     Stack(
                       children: [
                         Container(
@@ -209,6 +218,7 @@ class _ApprentissagePageState extends State<ApprentissagePage> {
                         ),
                       ],
                     ),
+                    )
                   ],
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height *0.03,),
